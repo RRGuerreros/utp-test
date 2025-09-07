@@ -1,0 +1,16 @@
+{
+  "id": null,
+  "title": "Programacion",
+  "content": "programacion en java y spring",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Java"
+    },
+    {
+      "id": 2,
+      "name": "Spring"
+    }
+  ],
+  "user": null
+}

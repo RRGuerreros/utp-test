@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: utp-infrastructure
+  datasource:
+    url: jdbc:h2:mem:db_utp
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: always
+      platform: h2
+jwt:
+  secret: e91UEyCrMak6AuKD4d4QXS+chPhYNwH+p66Er2NgTi4=
+  expiration: 3600000
+
+

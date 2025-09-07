@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "5510ea81-d158-42c4-822d-53e169a5b872",
+		"name": "collection-utp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43840768",
+		"_collection_link": "https://raphael-8795908.postman.co/workspace/Raphael's-Workspace~e98175b7-24ec-483c-842a-fef428eac9c2/collection/43840768-5510ea81-d158-42c4-822d-53e169a5b872?action=share&source=collection_link&creator=43840768"
+	},
+	"item": [
+		{
+			"name": "Autenticarse (login)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"raphael\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Nota",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwicm9sZXMiOiJVU0VSIiwiaWF0IjoxNzU3MTk3NDg2LCJleHAiOjE3NTcyMDEwODZ9.NvYqPm8w8TAJTLjbVu4OciO8fkR4RuM3JlaBi9brM4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\": \"Hablando sobre lenguajes de programación\",\r\n\t\"content\": \"Los lenguajes de programación son...\",\r\n\t\"tags\": [\"java\", \"python\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/notes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Notas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwicm9sZXMiOiJVU0VSIiwiaWF0IjoxNzU3MTk3NDg2LCJleHAiOjE3NTcyMDEwODZ9.NvYqPm8w8TAJTLjbVu4OciO8fkR4RuM3JlaBi9brM4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/notes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
